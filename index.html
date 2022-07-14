@@ -10,9 +10,6 @@
   <body>
     <div id="app">
       <h1>Soma de 2 + 2: {{ sum() }}</h1>
-      <h1>Subtração de 2 - 2: {{ subtract(2, 2) }}</h1>
-      <h1>Multiplicação de 2 * 2: {{ multiply(2, 2) }}</h1>
-      <h1>Divisão de 2 / 2: {{ division(2, 2) }}</h1>
     </div>
 
     <script>
@@ -29,27 +26,6 @@
           ) {
             //Função convencional
             return firstValue + secondValue;
-          },
-          subtract: function (
-            firstValue = this.firstValue,
-            secondValue = this.secondValue
-          ) {
-            //Função anônima
-            return firstValue - secondValue;
-          },
-          multiply: (
-            firstValue = this.firstValue,
-            secondValue = this.secondValue
-          ) => {
-            //Função de setas (Arrow Function)
-            return firstValue * secondValue;
-          },
-          division(
-            firstValue = this.firstValue,
-            secondValue = this.secondValue
-          ) {
-            //Método
-            return firstValue / secondValue;
           },
         },
       });
