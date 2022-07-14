@@ -1,8 +1,9 @@
 const vm = new Vue({
   el: "#app",
   data: {
-    link: "https://github.com",
-    classBold: "bold",
+    box1Color: "red",
+    box2Color: "blue",
+    classColors: ["red", "blue"],
   },
   methods: {},
 });

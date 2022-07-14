@@ -11,20 +11,22 @@
   <body>
     <div id="app">
       <section>
-        <!-- Encadeamento de classes -->
-        <p class="paragraph" v-bind:class="classBold">
-          <!-- Sobreposição do link pelo github -->
-          <a v-bind:href="link" href="https://github.com/JuanSavedra">
-            Link para o meu github
-          </a>
-        </p>
-        <!-- Encadeamento de classes -->
-        <p v-bind:class="classBold" class="paragraph">
-          <!-- Sobreposição do github pelo link -->
-          <a href="https://github.com/JuanSavedra" v-bind:href="link">
-            Link para o github em si
-          </a>
-        </p>
+        <div
+          v-bind:class="box1Color == 'red' ? classColors[0] : classColors[1]"
+        >
+          Caixa 1
+        </div>
+        <div
+          v-bind:class="box2Color == 'red' ? classColors[0] : classColors[1]"
+        >
+          Caixa 2
+        </div>
+        <form>
+          <label for="Input">
+            Expressões dentro do input
+            <input v-bind:value="5 + 5" type="number" id="Input" />
+          </label>
+        </form>
       </section>
     </div>
     <script src="./js/index.js"></script>
