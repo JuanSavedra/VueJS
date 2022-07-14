@@ -8,28 +8,33 @@
     <title>VueJS</title>
   </head>
   <body>
-    <div id="app">{{ message }}</div>
+    <div id="app">
+      <h1>{{ message }}</h1>
+      <p>ID: {{ id }}</p>
+      <p>Email: {{ email }}</p>
+      <p>Senha: {{ password }}</p>
+      <p>Trabalha como: {{ jobs[0] }} e {{ jobs[1] }}</p>
+      <p>Salário: {{ salary }}</p>
+      <p>Mãe: Nome: {{ parents[0].name }} | Email: {{parents[0].email}}</p>
+      <p>Pai: Nome: {{ parents[1].name }} | Email: {{parents[1].email}}</p>
+    </div>
 
     <script>
-      //Forma mais utilizada:
       const vm = new Vue({
         el: "#app",
         data: {
-          message: "Elemento controlado pelo VueJS",
+          message: "Dados do Robson",
+          id: "167b5a-5d5aw14-4dwa5d",
+          email: "robson@gmail.com",
+          password: "21343819",
+          salary: 4599.99,
+          jobs: ["Programador", "Designer"],
+          parents: [
+            { name: "Julia", email: "julia@gmail.com" },
+            { name: "Patrick", email: "patrick@gmail.com" },
+          ],
         },
       });
-
-      //Forma menos utilizada:
-      /*
-      options = {
-        el: "#app", //el = Element
-        data: {
-          message: "Elemento controlado pelo VueJS",
-        },
-      };
-
-      const vm = new Vue(options); //vm = ViewModel
-      */
     </script>
   </body>
 </html>
