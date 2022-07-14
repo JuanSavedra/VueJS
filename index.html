@@ -10,32 +10,30 @@
   </head>
   <body>
     <div id="app">
-      <form>
-        <label for="Email">
-          Email
-          <input id="Email" type="text" v-bind:placeholder="placeholderEmail" />
-        </label>
-        <label for="Password">
-          Senha
-          <input
-            id="Password"
-            type="password"
-            v-bind:placeholder="placeholderPassword"
-          />
-        </label>
-        <div>
-          <a v-bind:href="link">Esqueceu a senha?</a>
-        </div>
-      </form>
+      <section>
+        <!-- Encadeamento de classes -->
+        <p class="paragraph" v-bind:class="classBold">
+          <!-- Sobreposição do link pelo github -->
+          <a v-bind:href="link" href="https://github.com/JuanSavedra">
+            Link para o meu github
+          </a>
+        </p>
+        <!-- Encadeamento de classes -->
+        <p v-bind:class="classBold" class="paragraph">
+          <!-- Sobreposição do github pelo link -->
+          <a href="https://github.com/JuanSavedra" v-bind:href="link">
+            Link para o github em si
+          </a>
+        </p>
+      </section>
     </div>
 
     <script>
       const vm = new Vue({
         el: "#app",
         data: {
-          placeholderEmail: "Digite seu email",
-          placeholderPassword: "Digite sua senha",
-          link: "#",
+          link: "https://github.com",
+          classBold: "bold",
         },
         methods: {},
       });
