@@ -8,6 +8,28 @@
     <title>VueJS</title>
   </head>
   <body>
-    Teste
+    <div id="app">{{ message }}</div>
+
+    <script>
+      //Forma mais utilizada:
+      const vm = new Vue({
+        el: "#app",
+        data: {
+          message: "Elemento controlado pelo VueJS",
+        },
+      });
+
+      //Forma menos utilizada:
+      /*
+      options = {
+        el: "#app", //el = Element
+        data: {
+          message: "Elemento controlado pelo VueJS",
+        },
+      };
+
+      const vm = new Vue(options); //vm = ViewModel
+      */
+    </script>
   </body>
 </html>
