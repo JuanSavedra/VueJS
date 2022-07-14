@@ -21,17 +21,13 @@ section {
   flex-direction: column;
 }
 
-section div {
-  padding: 4rem;
-  margin: 1rem;
-  background-color: aquamarine;
+a {
+  font-size: 2rem;
+  color: rgb(97, 95, 95);
+  font-weight: bold;
+  text-decoration: none;
+  text-align: center;
+  padding: 2rem;
   border-radius: 6px;
-}
-
-.red {
-  background-color: rgb(221, 45, 45);
-}
-
-.blue {
-  background-color: rgb(41, 41, 218);
+  background-color: antiquewhite;
 }

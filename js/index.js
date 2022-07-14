@@ -1,9 +1,9 @@
 const vm = new Vue({
   el: "#app",
-  data: {
-    box1Color: "red",
-    box2Color: "blue",
-    classColors: ["red", "blue"],
+  data: {},
+  methods: {
+    sendAlert: function sendAlert(alertMessage) {
+      return alert(alertMessage);
+    },
   },
-  methods: {},
 });

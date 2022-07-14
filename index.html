@@ -11,22 +11,9 @@
   <body>
     <div id="app">
       <section>
-        <div
-          v-bind:class="box1Color == 'red' ? classColors[0] : classColors[1]"
+        <a href="#" v-on:click="sendAlert('Você clicou no botão')"
+          >Clique aqui</a
         >
-          Caixa 1
-        </div>
-        <div
-          v-bind:class="box2Color == 'red' ? classColors[0] : classColors[1]"
-        >
-          Caixa 2
-        </div>
-        <form>
-          <label for="Input">
-            Expressões dentro do input
-            <input v-bind:value="5 + 5" type="number" id="Input" />
-          </label>
-        </form>
       </section>
     </div>
     <script src="./js/index.js"></script>
