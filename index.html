@@ -9,7 +9,7 @@
   </head>
   <body>
     <div id="app">
-      <h1>Soma de 2 + 2: {{ sum(2, 2) }}</h1>
+      <h1>Soma de 2 + 2: {{ sum() }}</h1>
       <h1>Subtração de 2 - 2: {{ subtract(2, 2) }}</h1>
       <h1>Multiplicação de 2 * 2: {{ multiply(2, 2) }}</h1>
       <h1>Divisão de 2 / 2: {{ division(2, 2) }}</h1>
@@ -18,21 +18,36 @@
     <script>
       const vm = new Vue({
         el: "#app",
-        data: {},
+        data: {
+          firstValue: 2,
+          secondValue: 2,
+        },
         methods: {
-          sum: function sum(firstValue, secondValue) {
+          sum: function sum(
+            firstValue = this.firstValue,
+            secondValue = this.secondValue
+          ) {
             //Função convencional
             return firstValue + secondValue;
           },
-          subtract: function (firstValue, secondValue) {
+          subtract: function (
+            firstValue = this.firstValue,
+            secondValue = this.secondValue
+          ) {
             //Função anônima
             return firstValue - secondValue;
           },
-          multiply: (firstValue, secondValue) => {
+          multiply: (
+            firstValue = this.firstValue,
+            secondValue = this.secondValue
+          ) => {
             //Função de setas (Arrow Function)
             return firstValue * secondValue;
           },
-          division(firstValue, secondValue) {
+          division(
+            firstValue = this.firstValue,
+            secondValue = this.secondValue
+          ) {
             //Método
             return firstValue / secondValue;
           },
