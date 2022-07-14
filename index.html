@@ -9,30 +9,33 @@
   </head>
   <body>
     <div id="app">
-      <h1>{{ message }}</h1>
-      <p>ID: {{ id }}</p>
-      <p>Email: {{ email }}</p>
-      <p>Senha: {{ password }}</p>
-      <p>Trabalha como: {{ jobs[0] }} e {{ jobs[1] }}</p>
-      <p>Salário: {{ salary }}</p>
-      <p>Mãe: Nome: {{ parents[0].name }} | Email: {{parents[0].email}}</p>
-      <p>Pai: Nome: {{ parents[1].name }} | Email: {{parents[1].email}}</p>
+      <h1>Soma de 2 + 2: {{ sum(2, 2) }}</h1>
+      <h1>Subtração de 2 - 2: {{ subtract(2, 2) }}</h1>
+      <h1>Multiplicação de 2 * 2: {{ multiply(2, 2) }}</h1>
+      <h1>Divisão de 2 / 2: {{ division(2, 2) }}</h1>
     </div>
 
     <script>
       const vm = new Vue({
         el: "#app",
-        data: {
-          message: "Dados do Robson",
-          id: "167b5a-5d5aw14-4dwa5d",
-          email: "robson@gmail.com",
-          password: "21343819",
-          salary: 4599.99,
-          jobs: ["Programador", "Designer"],
-          parents: [
-            { name: "Julia", email: "julia@gmail.com" },
-            { name: "Patrick", email: "patrick@gmail.com" },
-          ],
+        data: {},
+        methods: {
+          sum: function sum(firstValue, secondValue) {
+            //Função convencional
+            return firstValue + secondValue;
+          },
+          subtract: function (firstValue, secondValue) {
+            //Função anônima
+            return firstValue - secondValue;
+          },
+          multiply: (firstValue, secondValue) => {
+            //Função de setas (Arrow Function)
+            return firstValue * secondValue;
+          },
+          division(firstValue, secondValue) {
+            //Método
+            return firstValue / secondValue;
+          },
         },
       });
     </script>
