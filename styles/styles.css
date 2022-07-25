@@ -31,3 +31,43 @@ a {
   border-radius: 6px;
   background-color: antiquewhite;
 }
+
+div {
+  border-radius: 6px;
+}
+
+.cubes {
+  border: 1px solid black;
+}
+
+.receive-color {
+  width: 200px;
+  height: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.green {
+  background-color: aquamarine;
+}
+
+.blue {
+  background-color: cornflowerblue;
+}
+
+.red {
+  background-color: rgb(203, 77, 77);
+}
+
+.set-color {
+  width: 60px;
+  height: 60px;
+}
+
+#setter {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 12px;
+}

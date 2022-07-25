@@ -1,9 +1,12 @@
 const vm = new Vue({
   el: "#app",
-  data: {},
+  data: {
+    currentColor: "white",
+  },
   methods: {
-    sendAlert: (event) => {
-      return console.log(event);
+    setColor: function (color) {
+      this.currentColor = color;
+      return color;
     },
   },
 });

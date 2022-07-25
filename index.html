@@ -10,8 +10,22 @@
   </head>
   <body>
     <div id="app">
+      <section id="receiver">
+        <div class="receive-color cubes" v-bind:class="currentColor">
+          <p>
+            <strong>Background color: {{ currentColor }}</strong>
+          </p>
+        </div>
+      </section>
       <section>
-        <a href="#" v-on:click="sendAlert($event)"> Clique aqui </a>
+        <div id="setter">
+          <div class="set-color cubes red" v-on:click="setColor('red')"></div>
+          <div class="set-color cubes blue" v-on:click="setColor('blue')"></div>
+          <div
+            class="set-color cubes green"
+            v-on:click="setColor('green')"
+          ></div>
+        </div>
       </section>
     </div>
     <script src="./js/index.js"></script>
