@@ -1,6 +1,18 @@
 const vm = new Vue ({
     el: "#app",
-    data: {
-        message: "First template controlated by Vue"
+    data: {},
+    methods: {
+        sum: function sum(number1, number2) {
+            return number1 + number2;
+        },
+        subtraction: function(number1, number2) {
+            return number1 - number2;
+        },
+        multiplication: (number1, number2) => {
+            return number1 * number2;
+        },
+        division(number1, number2) {
+            return number1 / number2;
+        }
     }
 });
