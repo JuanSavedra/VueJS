@@ -1,12 +1,12 @@
 const vm = new Vue ({
     el: "#app",
     data: {
-        currentColor: "blue",
-        color: "blue"
+        balanceIsVisible: false,
+        balance: 1212.59
     },
     methods: {
-        showEvent: function(event) {
-            alert(event)
+        showBalance: function() {
+            this.balanceIsVisible = !this.balanceIsVisible;
         }
     }
 });

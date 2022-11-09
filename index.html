@@ -9,8 +9,16 @@
     <title>VueJS</title>
 </head>
 <body>
-    <div id="app">
-        <div v-bind:class="currentColor = 'blue' ? color : 'green'" v-on:click="showEvent($event)"></div>
+    <div id="app"> 
+        <h1>
+            Balance: 
+            <span v-if="balanceIsVisible">R$ {{ balance }}</span>
+            <span v-else>Hidden</span>
+        </h1>
+        <button v-on:click="showBalance()">
+            <span v-if="balanceIsVisible">Hide Balance</span>
+            <span v-else>Show Balance</span>
+        </button>
     </div>
     <script src="vueScript.js"></script>
 </body>

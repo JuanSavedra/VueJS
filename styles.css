@@ -15,16 +15,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-}
-
-.green {
-    padding: 22px;
+    flex-direction: column;
     border-radius: 8px;
-    background-color: green;
-}
-
-.blue {
-    padding: 22px;
-    border-radius: 8px;
-    background-color: blue;
+    background-color: antiquewhite;
 }
