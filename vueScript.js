@@ -1,18 +1,21 @@
 const vm = new Vue ({
     el: "#app",
-    data: {},
+    data: {
+        number1: 2,
+        number2: 2
+    },
     methods: {
-        sum: function sum(number1, number2) {
-            return number1 + number2;
+        sum: function sum() {
+            return this.number1 + this.number2;
         },
-        subtraction: function(number1, number2) {
-            return number1 - number2;
+        subtraction: function() {
+            return this.number1 - this.number2;
         },
-        multiplication: (number1, number2) => {
-            return number1 * number2;
+        multiplication: () => {
+            return 2 * 2; //Não pode recuperar os atributos do data por this
         },
-        division(number1, number2) {
-            return number1 / number2;
+        division() {
+            return this.number1 / this.number2;
         }
     }
 });
