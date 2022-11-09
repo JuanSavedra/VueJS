@@ -10,7 +10,7 @@
 </head>
 <body>
     <div id="app">
-        <div :class="currentColor = 'blue' ? color : 'green'"></div>
+        <div v-bind:class="currentColor = 'blue' ? color : 'green'" v-on:click="alertMessage()"></div>
     </div>
     <script src="vueScript.js"></script>
 </body>

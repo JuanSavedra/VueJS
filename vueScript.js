@@ -4,5 +4,9 @@ const vm = new Vue ({
         currentColor: "blue",
         color: "blue"
     },
-    methods: {}
+    methods: {
+        alertMessage: () => {
+            alert("Clicado")
+        }
+    }
 });
