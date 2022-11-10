@@ -7,32 +7,51 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    background-color: rgb(169, 159, 159);
 }
 
 #app {
-    width: 400px;
-    height: 400px;
+    color: white;
+}
+
+.div-rectangle {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    border-radius: 8px;
-    background-color: antiquewhite;
+    width: 600px;
+    height: 600px;
+    padding: 20px;
+    border: 2px solid black;
 }
 
-.mouseover {
+.div-boxes {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 100px 48px;
-    border-radius: 8px;
-    background-color: aqua;
-    font-size: 18px;
+    margin-top: 24px;
 }
 
-.secret-content {
-    margin-top: 24px;
-    padding: 32px;
-    border-radius: 8px;
-    background-color:cornflowerblue;
+.box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100px;
+    height: 100px;
+    margin: 0 12px;
+    border: 2px solid black;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.red {
+    background-color: red;
+}
+
+.green {
+    background-color: green;
+}
+
+.blue {
+    background-color: blue;
 }
