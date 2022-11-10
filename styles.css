@@ -19,3 +19,20 @@ body {
     border-radius: 8px;
     background-color: antiquewhite;
 }
+
+.mouseover {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 100px 48px;
+    border-radius: 8px;
+    background-color: aqua;
+    font-size: 18px;
+}
+
+.secret-content {
+    margin-top: 24px;
+    padding: 32px;
+    border-radius: 8px;
+    background-color:cornflowerblue;
+}

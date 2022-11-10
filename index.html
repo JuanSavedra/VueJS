@@ -10,15 +10,16 @@
 </head>
 <body>
     <div id="app"> 
-        <h1>
-            Balance: 
-            <span v-if="balanceIsVisible">R$ {{ balance }}</span>
-            <span v-else>Hidden</span>
-        </h1>
-        <button v-on:click="showBalance()">
-            <span v-if="balanceIsVisible">Hide Balance</span>
-            <span v-else>Show Balance</span>
-        </button>
+        <div 
+            v-on:mouseover="secretContentIsShowing = true"
+            v-on:mouseout="secretContentIsShowing = false"
+            class="mouseover"
+        >
+            Mouse over to show
+        </div>
+        <div v-show="secretContentIsShowing" class="secret-content">
+            Secret Content
+        </div> 
     </div>
     <script src="vueScript.js"></script>
 </body>
