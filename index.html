@@ -9,7 +9,11 @@
     <title>VueJS</title>
 </head>
 <body>
-    <div id="app" v-html="htmlElements"></div>
+    <div id="app">
+        <h1 v-once>Initial Count: {{ count }}</h1>
+        <h1>Current Count: {{ count }}</h1>
+        <button v-on:click="addToCounter()">Add To Counter</button>
+    </div>
     <script src="vueScript.js"></script>
 </body>
 </html>
