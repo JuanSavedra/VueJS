@@ -9,18 +9,7 @@
     <title>VueJS</title>
 </head>
 <body>
-    <div id="app">
-        <div class="div-rectangle" v-bind:class="color" v-on:mousemove="currentCoordenates($event)">
-            <h1>Current Color: {{ color }}</h1>
-            <h1>Coord X: {{ coordX }}</h1>
-            <h1>Coord Y: {{ coordY }}</h1>
-        </div>
-        <div class="div-boxes">
-            <div class="box red" v-on:click="changeColor('red')">Red</div>
-            <div class="box green" v-on:click="changeColor('green')">Green</div>
-            <div class="box blue" v-on:click="changeColor('blue')">Blue</div>
-        </div>
-    </div>
+    <div id="app" v-html="htmlElements"></div>
     <script src="vueScript.js"></script>
 </body>
 </html>
