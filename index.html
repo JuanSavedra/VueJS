@@ -10,9 +10,9 @@
 </head>
 <body>
     <div id="app">
-        <ul>
-            <li v-for="course in courses" v-text="course"></li>
-        </ul>
+        <template v-if="welcome">
+            <h1>Welcome</h1>
+        </template>
     </div>
     <script src="vueScript.js"></script>
 </body>
